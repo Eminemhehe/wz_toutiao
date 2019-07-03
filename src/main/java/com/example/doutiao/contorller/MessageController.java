@@ -1,7 +1,7 @@
 package com.example.doutiao.contorller;
-
-import com.example.doutiao.model.*;
-import com.example.doutiao.service.*;
+import com.example.doutiao.bean.*;
+import com.example.doutiao.service.MessageService;
+import com.example.doutiao.service.UserService;
 import com.example.doutiao.util.ToutiaoUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,10 +24,10 @@ public class MessageController {
     @Autowired
     HostHolder hostHolder;
 
-    @Autowired
+    @Resource
     UserService userService;
 
-    @Autowired
+    @Resource
     MessageService messageService;
 
     @RequestMapping(path = {"/msg/detail"}, method = {RequestMethod.GET})

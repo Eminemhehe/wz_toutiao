@@ -1,38 +1,24 @@
 package com.example.doutiao.service;
 
-import com.example.doutiao.dao.MessageDAO;
-import com.example.doutiao.dao.NewsDAO;
-import com.example.doutiao.model.Message;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.example.doutiao.bean.Message;
+import com.example.doutiao.mapper.MessageDAO;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * Created by nowcoder on 2016/7/7.
+ * Created by wz on 2019/7/3.
  */
-@Service
-public class MessageService {
-    @Resource
-    private MessageDAO messageDAO;
+public interface MessageService {
 
-    public int addMessage(Message message) {
-        return messageDAO.addMessage(message);
-    }
 
-    public List<Message> getConversationList(int userId, int offset, int limit) {
-        // conversation的总条数存在id里
-        return messageDAO.getConversationList(userId, offset, limit);
-    }
+    int addMessage(Message message);
 
-    public List<Message> getConversationDetail(String conversationId, int offset, int limit) {
-        // conversation的总条数存在id里
-        return messageDAO.getConversationDetail(conversationId, offset, limit);
-    }
+    List<Message> getConversationList(int userId, int offset, int limit);
 
-    public int getUnreadCount(int userId, String conversationId) {
-        return messageDAO.getConversationUnReadCount(userId, conversationId);
-    }
+    List<Message> getConversationDetail(String conversationId, int offset, int limit);
+
+    int getUnreadCount(int userId, String conversationId);
+
+
 }

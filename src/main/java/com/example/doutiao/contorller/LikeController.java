@@ -4,11 +4,11 @@ package com.example.doutiao.contorller;
 import com.example.doutiao.async.EventModel;
 import com.example.doutiao.async.EventProducer;
 import com.example.doutiao.async.EventType;
-import com.example.doutiao.model.EntityType;
-import com.example.doutiao.model.HostHolder;
-import com.example.doutiao.model.News;
-import com.example.doutiao.service.LikeService;
-import com.example.doutiao.service.NewService;
+import com.example.doutiao.bean.EntityType;
+import com.example.doutiao.bean.HostHolder;
+import com.example.doutiao.bean.News;
+import com.example.doutiao.service.Imp.LikeServiceImp;
+import com.example.doutiao.service.Imp.NewServiceImp;
 import com.example.doutiao.util.ToutiaoUtil;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +25,13 @@ import javax.annotation.Resource;
 @Controller
 public class LikeController {
     @Autowired
-    LikeService likeService;
+    LikeServiceImp likeService;
 
     @Autowired
     HostHolder hostHolder;
 
     @Autowired
-    NewService newService;
+    NewServiceImp newService;
     @Resource
     EventProducer eventProducer;
 

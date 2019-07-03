@@ -1,7 +1,6 @@
-package com.example.doutiao.dao;
-import com.example.doutiao.model.User;
+package com.example.doutiao.mapper;
+import com.example.doutiao.bean.User;
 import org.apache.ibatis.annotations.*;
-import org.springframework.stereotype.Service;
 
 /**
  * Created by nowcoder on 2016/7/2.

@@ -1,4 +1,4 @@
-package com.example.doutiao.model;
+package com.example.doutiao.bean;
 
 import java.util.Date;
 

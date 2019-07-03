@@ -1,6 +1,6 @@
-package com.example.doutiao.dao;
+package com.example.doutiao.mapper;
 
-import com.example.doutiao.model.News;
+import com.example.doutiao.bean.News;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

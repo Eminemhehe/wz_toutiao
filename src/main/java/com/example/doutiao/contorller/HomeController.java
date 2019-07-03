@@ -1,11 +1,11 @@
 package com.example.doutiao.contorller;
 
-import com.example.doutiao.model.EntityType;
-import com.example.doutiao.model.HostHolder;
-import com.example.doutiao.model.ViewObject;
-import com.example.doutiao.model.News;
-import com.example.doutiao.service.LikeService;
-import com.example.doutiao.service.NewService;
+import com.example.doutiao.bean.EntityType;
+import com.example.doutiao.bean.HostHolder;
+import com.example.doutiao.bean.ViewObject;
+import com.example.doutiao.bean.News;
+import com.example.doutiao.service.Imp.LikeServiceImp;
+import com.example.doutiao.service.Imp.NewServiceImp;
 import com.example.doutiao.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,19 +15,17 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by wz on 2019/5/13.
- */
+
 @Controller
 public class HomeController {
     @Resource
-    NewService newService;
+    NewServiceImp newService;
     @Resource
     UserService userService;
     @Resource
     HostHolder hostHolder;
     @Resource
-    LikeService likeService;
+    LikeServiceImp likeService;
 
     private List<ViewObject> getNews (int userId,int offset, int limit){
         List<News> newsList =newService.getLastestNews(userId,offset,limit);

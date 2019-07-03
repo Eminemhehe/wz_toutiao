@@ -1,6 +1,6 @@
 package com.example.doutiao.interceptor;
 
-import com.example.doutiao.model.HostHolder;
+import com.example.doutiao.bean.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

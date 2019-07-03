@@ -1,10 +1,13 @@
 package com.example.doutiao.contorller;
 
 import com.example.doutiao.aspect.LogAspect;
-import com.example.doutiao.model.*;
-import com.example.doutiao.service.*;
+import com.example.doutiao.bean.*;
+import com.example.doutiao.service.Imp.CommentServiceImp;
+import com.example.doutiao.service.Imp.LikeServiceImp;
+import com.example.doutiao.service.Imp.NewServiceImp;
+import com.example.doutiao.service.Imp.QiniuServiceImp;
+import com.example.doutiao.service.UserService;
 import com.example.doutiao.util.ToutiaoUtil;
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -21,25 +24,24 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by wz on 2019/5/15.
- */
+
+
 @Controller
 public class NewsController {
     private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
 
     @Resource
-    NewService newService;
+    NewServiceImp newService;
     @Resource
-    QiniuService qiniuService;
+    QiniuServiceImp qiniuService;
     @Resource
     HostHolder hostHolder;
     @Resource
-    CommentService commentService;
+    CommentServiceImp commentService;
     @Resource
     UserService userService;
     @Resource
-    LikeService likeService;
+    LikeServiceImp likeService;
 
     //注意地址啊！！！！！！！！！！！！！！！！！！！！！！
     @RequestMapping(path = {"/image/"}, method = {RequestMethod.GET})

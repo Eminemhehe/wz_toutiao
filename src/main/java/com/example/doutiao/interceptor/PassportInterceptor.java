@@ -1,11 +1,10 @@
 package com.example.doutiao.interceptor;
 
-import com.example.doutiao.dao.LoginTicketDAO;
-import com.example.doutiao.dao.UserDAO;
-import com.example.doutiao.model.HostHolder;
-import com.example.doutiao.model.LoginTicket;
-import com.example.doutiao.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.doutiao.mapper.LoginTicketDAO;
+import com.example.doutiao.mapper.UserDAO;
+import com.example.doutiao.bean.HostHolder;
+import com.example.doutiao.bean.LoginTicket;
+import com.example.doutiao.bean.User;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

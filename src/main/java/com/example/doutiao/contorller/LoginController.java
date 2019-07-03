@@ -4,7 +4,6 @@ import com.example.doutiao.aspect.LogAspect;
 import com.example.doutiao.async.EventModel;
 import com.example.doutiao.async.EventProducer;
 import com.example.doutiao.async.EventType;
-import com.example.doutiao.model.HostHolder;
 import com.example.doutiao.service.UserService;
 import com.example.doutiao.util.ToutiaoUtil;
 import org.slf4j.Logger;
@@ -18,9 +17,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
-/**
- * Created by wz on 2019/5/13.
- */
+
+
+
 @Controller
 public class LoginController {
     private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);

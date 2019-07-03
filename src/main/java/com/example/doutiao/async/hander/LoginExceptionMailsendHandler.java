@@ -3,7 +3,7 @@ package com.example.doutiao.async.hander;
 import com.example.doutiao.async.EventHandler;
 import com.example.doutiao.async.EventModel;
 import com.example.doutiao.async.EventType;
-import com.example.doutiao.model.Message;
+import com.example.doutiao.bean.Message;
 import com.example.doutiao.service.MessageService;
 import com.example.doutiao.util.MailSender;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +12,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.*;
 
-/**
- * Created by nowcoder on 2016/7/16.
- */
+
 @Component
 public class LoginExceptionMailsendHandler implements EventHandler {
     @Autowired

@@ -1,7 +1,6 @@
-package com.example.doutiao.dao;
+package com.example.doutiao.mapper;
 
-import com.example.doutiao.model.Comment;
-import com.example.doutiao.model.Message;
+import com.example.doutiao.bean.Message;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

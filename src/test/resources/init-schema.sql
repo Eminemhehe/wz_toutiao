@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `user`;
+/*DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL DEFAULT '',
@@ -59,4 +59,4 @@ CREATE TABLE `message` (
   INDEX `conversation_index` (`conversation_id` ASC),
   INDEX `created_date` (`created_date` ASC))
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+DEFAULT CHARACTER SET = utf8;*/

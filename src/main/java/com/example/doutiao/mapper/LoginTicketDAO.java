@@ -1,7 +1,6 @@
-package com.example.doutiao.dao;
+package com.example.doutiao.mapper;
 
-import com.example.doutiao.model.LoginTicket;
-import com.example.doutiao.model.User;
+import com.example.doutiao.bean.LoginTicket;
 import org.apache.ibatis.annotations.*;
 
 /**

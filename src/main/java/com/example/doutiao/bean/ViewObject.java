@@ -1,8 +1,7 @@
-package com.example.doutiao.model;
+package com.example.doutiao.bean;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * Created by rainday on 16/6/30.
